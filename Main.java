@@ -11,6 +11,16 @@ public class Main {
         // используйте лямбда-выражения и ссылки на методы
         // cats.sort(?);
         // Printer.print(cats);
+
+
+        System.out.println("Сортировка по породе (лямбда-выражение)");
+        cats.sort((cat1, cat2) -> cat1.getBreed().compareTo(cat2.getBreed()));
+        Printer.print(cats);
+
+        System.out.println("Сортировка по породе (ссылка на метод)");
+        cats.sort(Cat::compareByBreed);
+        Printer.print(cats);
+
     }
 
 }
