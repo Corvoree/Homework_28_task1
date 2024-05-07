@@ -21,6 +21,11 @@ public class Main {
         cats.sort(Cat::compareByBreed);
         Printer.print(cats);
 
+        System.out.println("Сортировка по имени и возрасту (ссылка на метод)");
+        cats.sort(Cat::compareByNameAndAge);
+        Printer.print(cats);
+
+
     }
 
 }
