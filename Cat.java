@@ -67,6 +67,14 @@ final class Cat {
         return this.breed.compareTo(other.breed);
     }
 
+    public int compareByNameAndAge(Cat other){
+        int nameComparison = this.name.compareTo(other.name);
+        if (nameComparison != 0){
+            return nameComparison;
+        } else {
+            return Integer.compare(this.age, other.age);
+        }
+    }
 
     /*********/
 }
