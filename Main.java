@@ -25,7 +25,13 @@ public class Main {
         cats.sort(Cat::compareByNameAndAge);
         Printer.print(cats);
 
+        System.out.println("Удаление котов определенного цвета (лямбда-выражение)");
+        cats.removeIf(cat -> cat.getColor().equals(Cat.Color.SILVER));
+        Printer.print(cats);
 
+        System.out.println("Удаление котов с длиной имени 5 (лямбда-выражение)");
+        cats.removeIf(cat -> cat.getName().length() == 5);
+        Printer.print(cats);
     }
 
 }
