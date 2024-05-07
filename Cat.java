@@ -63,5 +63,10 @@ final class Cat {
     // Ваш код может находится здесь
     // остальную часть этого файла вы менять не можете
 
+    public int compareByBreed(Cat other){
+        return this.breed.compareTo(other.breed);
+    }
+
+
     /*********/
 }
